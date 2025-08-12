@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafetyFirst Waitlist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Inknut Antiqua', serif;
+        }
+        .gradient-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            /* Final corrected gradient for an exact match */
+            background: linear-gradient(188deg, #F6F5F2 43%, #FFB71B 65%);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="gradient-background"></div>
+
+    <div class="content-wrapper">
+        <!-- Responsive Header -->
+        <!-- Spacing Adjustment: Changed max-width, horizontal and vertical padding -->
+        <header class="max-w-6xl mx-auto py-6 px-6 sm:px-8">
+            <nav class="flex justify-between items-center">
+                <span class="font-bold text-lg sm:text-xl">SafetyFirst</span>
+                <div class="flex items-center space-x-3 sm:space-x-6">
+                    <a href="#" class="text-gray-800 text-sm sm:text-base">Log in</a>
+                    <button class="bg-gray-800 text-white font-bold py-2 px-4 sm:px-5 rounded-lg text-sm sm:text-base">Get access</button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Responsive Main Content -->
+        <!-- Spacing Adjustment: Changed max-width -->
+        <main class="max-w-6xl mx-auto">
+            <!-- Responsive Hero Section -->
+             <!-- Spacing Adjustment: Adjusted vertical padding for mobile and desktop -->
+            <section id="hero" class="text-center py-20 md:py-32 px-6 sm:px-8">
+                <h1 class="text-4xl lg:text-5xl font-bold leading-tight max-w-3xl mx-auto">Safer Travel Starts with the Complete Picture.</h1>
+                <!-- Spacing Adjustment: Increased margin-top -->
+                <p class="text-lg sm:text-xl mt-8 max-w-xl mx-auto text-gray-800">Get an interactive safety map built from thousands of global and local sources.</p>
+                
+                <!-- Form with method and name attributes -->
+                 <!-- Spacing Adjustment: Increased margin-top -->
+                <form method="POST" class="mt-10 flex flex-col md:flex-row justify-center items-center md:space-x-2 space-y-4 md:space-y-0">
+                    <input name="email" type="email" placeholder="Your email address" class="w-full md:w-72 p-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none" required>
+                    <button type="submit" class="w-full md:w-auto bg-gray-800 text-white font-bold py-3 px-6 rounded-lg">Get early access</button>
+                </form>
+                <p class="mt-4 text-gray-600 text-sm"><small>No spam. We’ll only use this for product invites.</small></p>
+            </section>
+
+            <!-- Responsive Visualization Section -->
+            <!-- Spacing Adjustment: Adjusted padding for consistency -->
+            <section id="visualization" class="py-16 sm:py-24 px-6 sm:px-8">
+                <div class="mx-auto max-w-4xl text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">Visualize Your Next Destination</h2>
+                    <div class="mt-12">
+                        <img src="{{ url_for('static', filename='image 7.png') }}" alt="Safety map UI" class="rounded-xl shadow-2xl ring-1 ring-gray-900/10 w-full">
+                    </div>
+                    <p class="mt-8 text-base md:text-lg leading-8 text-gray-700 max-w-2xl mx-auto">Instantly compare neighborhood safety, from color-coded zones down to specific AI-powered insights.</p>
+                </div>
+            </section>
+
+            <!-- Responsive Real-time Feed Section -->
+            <!-- Spacing Adjustment: Adjusted padding for consistency -->
+            <section id="real-time" class="py-16 sm:py-24 px-6 sm:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-x-12">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">Stay updated with a real-time feed of reported incidents.</h2>
+                        <p class="mt-6 text-base md:text-lg leading-8 text-gray-700">Real-time incident feed so you can avoid trouble as it happens in surrounding areas.</p>
+                    </div>
+                    <div class="md:w-1/2 mt-10 md:mt-0">
+                        <img src="{{ url_for('static', filename='image 7.png') }}" alt="Incident feed UI" class="rounded-xl shadow-2xl ring-1 ring-gray-900/10 w-full">
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Responsive AI Analysis Section -->
+            <!-- Spacing Adjustment: Adjusted padding for consistency -->
+            <section id="ai-analysis" class="py-16 sm:py-24 px-6 sm:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-x-24">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">Get Deeper Insight with AI Analysis.</h2>
+                        <p class="mt-6 text-base md:text-lg leading-8 text-gray-700">Our AI doesn't just show you a score. It explains the specific safety factors behind it, giving you the context needed for confident planning.</p>
+                        <button class="mt-8 bg-gray-800 text-white font-bold py-3 px-6 rounded-lg">Get early access</button>
+                    </div>
+                    <div class="md:w-1/2 mt-10 md:mt-0">
+                        <img src="{{ url_for('static', filename='image 7.png') }}" alt="AI analysis UI" class="rounded-xl shadow-2xl ring-1 ring-gray-900/10 w-full max-w-sm mx-auto">
+                        <div class="mt-4 bg-gray-900 text-white p-6 rounded-lg max-w-sm mx-auto">
+                            AI explains why an area is low/high risk and what to do.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Responsive Waitlist Section -->
+            <!-- Spacing Adjustment: Adjusted padding for consistency -->
+            <section id="waitlist" class="text-center py-16 sm:py-24 px-6 sm:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900">Join 3,000+ travelers on the waitlist</h2>
+                <p class="mt-6 text-base md:text-lg leading-8 text-gray-700 max-w-2xl mx-auto">Be the first to plan smarter. Get exclusive early access and help us build the future of informed, confident travel.</p>
+                
+                <!-- Form with method and name attributes -->
+                <form method="POST" class="mt-10 flex flex-col md:flex-row justify-center items-center md:space-x-2 space-y-4 md:space-y-0">
+                    <input name="email" type="email" placeholder="Your email address" class="w-full md:w-72 p-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:outline-none" required>
+                    <button type="submit" class="w-full md:w-auto bg-gray-800 text-white font-bold py-3 px-6 rounded-lg">Get early access</button>
+                </form>
+            </section>
+        </main>
+
+        <!-- Responsive Footer -->
+        <footer class="bg-gray-900 text-white text-center py-8 px-4">
+            <p>© 2025 SafetyFirst | <a href="#" class="underline hover:text-yellow-400 transition-colors">Privacy Policy</a> | <a href="#" class="underline hover:text-yellow-400 transition-colors">Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>

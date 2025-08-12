@@ -1,0 +1,15 @@
+# Virtual Environment
+# This folder contains installed packages and should not be shared
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Environment variables
+# Never commit sensitive keys or secrets
+.env
+
+# IDE/Editor specific folders
+.vscode/
+.idea/

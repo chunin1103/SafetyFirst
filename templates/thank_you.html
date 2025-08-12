@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inknut Antiqua', serif; }
+        .gradient-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(188deg, #F6F5F2 43%, #FFB71B 65%);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+    <!-- Gradient Background -->
+    <div class="gradient-background"></div>
+
+    <!-- Content -->
+    <div class="text-center bg-white p-12 rounded-lg shadow-xl">
+        <h1 class="text-4xl font-bold text-gray-800">Thank You!</h1>
+        <p class="mt-4 text-lg text-gray-600">You're on the waitlist. We'll be in touch soon.</p>
+        <a href="{{ url_for('home') }}" class="mt-8 inline-block bg-gray-800 text-white font-bold py-3 px-6 rounded-lg">
+            Go Back Home
+        </a>
+    </div>
+</body>
+</html>
