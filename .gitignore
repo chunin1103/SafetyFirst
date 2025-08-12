@@ -7,7 +7,6 @@ __pycache__/
 *.pyc
 
 # Environment variables
-# Never commit sensitive keys or secrets
 .env
 
 # IDE/Editor specific folders
